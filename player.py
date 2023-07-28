@@ -4,6 +4,7 @@ class Player:
         self.dorsal = dorsal
         self.position = position
         self.team = team
+        self.matches = []  # Lista para almacenar los partidos del jugador
 
     def get_name(self):
         return self.name
@@ -28,4 +29,10 @@ class Player:
 
     def set_team(self, new_team):
         self.team = new_team
+
+    def add_match(self, match):
+        self.matches.append(match)
+
+    def get_matches(self):
+        return self.matches
 
